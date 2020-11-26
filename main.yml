@@ -1,0 +1,17 @@
+---
+- name: Jenkins Deploy
+  hosts: jenkins
+  gather_facts: yes
+  become: true
+
+  vars:
+    jenkins_hostname: jenkins.pn.com
+    java_packages:
+      - openjdk-11-jdk
+
+  tasks: 
+    - name: Running on
+      command: hostname
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins

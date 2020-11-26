@@ -1,0 +1,5 @@
+tmp/*
+vagrant/.vagrant
+library.tar
+roles/*
+.DS_Store
